@@ -1,0 +1,12 @@
+module.exports.buildResponse = (statusCode, body) => {
+    console.log('Body : ',body);
+    return {
+        statusCode: statusCode,
+        headers: {
+            'Access-Control-Allow-Origin' : '*',
+			'Access-Control-Allow-Methods' : 'GET, HEAD, PUT, PATCH, POST, DELETE, OPTIONS'
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(body)
+    };
+  };
